@@ -1,0 +1,21 @@
+{
+    "credentials": {
+        "username": "juanito",
+        "password": "123456!",
+        "gender": "Male",
+        "day": "10",
+        "month": "October",
+        "year": "1980"
+    },
+    "productos": {
+        "product1": "Beige Shorts",
+        "product2": "White Shoes",
+        "price1": 19,
+        "price2": 30
+    },
+    "compra":{
+        "nombre": "Juan",
+        "apellido":  "Mora",
+        "numeroTarjeta": 5895268130001425
+    }
+}
