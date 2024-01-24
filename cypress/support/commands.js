@@ -23,3 +23,37 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('postRegister', (username, password, gender, day, month, year) => {
+    cy.request({
+        url: `https://pushing-it.onrender.com/api/register`,
+        method: "POST",
+        body: {
+            username,
+            password,
+            gender,
+            day,
+            month,
+            year
+        }
+    })
+});
+
+Cypress.Commands.add('postLogin', (username, password) => {
+    cy.request({
+        url: `https://pushing-it.onrender.com/api/login`,
+        method: "POST",
+        body: {
+            username,
+            password
+        }
+    })
+});
+
+Cypress.Commands.add('deleteUser', (username) => {
+    cy.request({
+        url: `https://pushing-it.onrender.com/api/deleteuser/${username}`,
+        method: "DELETE",
+        failOnStatusCode: false
+    })
+});
